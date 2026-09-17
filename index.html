@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotel Tuvalu · Hospedaje en Paipa, Boyacá</title>
+  <meta name="description" content="Hotel Tuvalu en Paipa, Boyacá. Habitaciones cómodas, atención cercana y una ubicación ideal para conocer el Lago Sochagota, los termales y el centro de Paipa.">
+  <meta name="theme-color" content="#1f2a1b">
+  <link rel="canonical" href="index.html">
+
+  <!-- Redes sociales -->
+  <meta property="og:title" content="Hotel Tuvalu · Paipa, Boyacá">
+  <meta property="og:description" content="Tu descanso comienza aquí. Habitaciones cómodas en el corazón de Paipa.">
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/favicon-64.png" sizes="64x64" type="image/png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Hotel Tuvalu",
+    "address": { "@type": "PostalAddress", "addressLocality": "Paipa", "addressRegion": "Boyacá", "addressCountry": "CO" }
+  }
+  </script>
+</head>
+<body>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav nav--portada" id="nav">
+    <div class="contenedor nav__inner">
+      <a class="nav__logo" href="index.html" aria-label="Hotel Tuvalu, Paipa, Boyacá">
+        <img class="logo--oscuro" src="images/logo.png" alt="Hotel Tuvalu">
+        <img class="logo--claro" src="images/logo-claro.png" alt="" aria-hidden="true">
+      </a>
+
+      <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#principal">Inicio</a></li>
+        <li><a href="#habitaciones-seccion">Habitaciones</a></li>
+        <li><a href="#servicios-seccion">Servicios</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a class="btn btn--dorado" href="reservas.html">Reservar</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="principal">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <img class="hero__img" src="images/hero.svg" alt="Hotel Tuvalu en Paipa, Boyacá">
+      <div class="contenedor hero__contenido">
+        <h1>Hotel Tuvalu</h1>
+        <p class="hero__lema">Tu descanso comienza aquí.</p>
+        <p class="hero__texto">Disfruta una experiencia de descanso, comodidad y tranquilidad en Paipa, Boyacá.</p>
+        <div class="hero__acciones">
+          <a class="btn btn--dorado" href="#habitaciones-seccion">Ver habitaciones</a>
+          <a class="btn btn--claro" href="reservas.html">Reservar ahora</a>
+        </div>
+      </div>
+      <div class="contenedor" style="position:relative">
+        <p class="hero__lugar">Paipa, Boyacá · Colombia</p>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE NOSOTROS ============ -->
+    <section class="seccion seccion--clara">
+      <div class="contenedor sobre">
+        <div class="revelar">
+          <h2>Una experiencia para disfrutar Paipa</h2>
+          <p style="margin-top:1.2rem">
+            El Hotel Tuvalu es un lugar pensado para descansar de verdad: habitaciones silenciosas,
+            atención cercana y una ubicación cómoda para recorrer Paipa a tu ritmo.
+            <!-- [TEXTO EDITABLE] Reemplaza este párrafo por la historia real del hotel. -->
+          </p>
+          <p style="margin-top:1rem">
+            Vengas por los termales, por trabajo o por un fin de semana en familia, aquí encuentras
+            un espacio tranquilo para volver después de cada plan.
+            <!-- [TEXTO EDITABLE] -->
+          </p>
+          <div class="sobre__datos">
+            <div class="sobre__dato"><strong>[N.º]</strong><span>habitaciones disponibles</span></div>
+            <div class="sobre__dato"><strong>[AÑO]</strong><span>atendiendo huéspedes</span></div>
+            <div class="sobre__dato"><strong>[MIN]</strong><span>del centro de Paipa</span></div>
+          </div>
+        </div>
+        <figure class="sobre__figura revelar">
+          <img src="images/hotel.svg" alt="Fachada del Hotel Tuvalu en Paipa">
+          <figcaption>Descanso en el corazón de Boyacá</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ HABITACIONES ============ -->
+    <section class="seccion seccion--arena" id="habitaciones-seccion">
+      <div class="contenedor">
+        <div class="encabezado revelar">
+          <h2>Encuentra tu habitación</h2>
+          <p>Cada habitación está pensada para un tipo de viaje. Elige la que se ajuste a tu plan y reserva en un par de minutos.</p>
+        </div>
+        <!-- Las tarjetas se generan desde HABITACIONES en js/config.js -->
+        <div class="habitaciones" id="habitaciones"></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="seccion seccion--verde" id="servicios-seccion">
+      <div class="contenedor">
+        <div class="encabezado revelar">
+          <h2>Lo que encuentras en el hotel</h2>
+          <p>Servicios sencillos y bien cuidados, que es lo que de verdad hace cómoda una estadía.</p>
+        </div>
+        <div class="servicios" id="servicios"></div>
+      </div>
+    </section>
+
+    <!-- ============ DESCUBRE PAIPA ============ -->
+    <section class="seccion seccion--clara" id="paipa">
+      <div class="contenedor">
+        <div class="encabezado revelar">
+          <h2>Descubre Paipa</h2>
+          <p>Paipa es uno de los destinos más visitados de Boyacá: paisajes de montaña, aguas termales, historia y la cocina boyacense. Desde el hotel tienes cerca varios de sus planes más conocidos.</p>
+        </div>
+        <div class="lugares" id="lugares"></div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN ============ -->
+    <section class="seccion seccion--arena" id="ubicacion">
+      <div class="contenedor">
+        <div class="encabezado revelar">
+          <h2>Cómo encontrarnos</h2>
+          <p>Estamos en Paipa, Boyacá, a corta distancia de los principales atractivos de la zona.</p>
+        </div>
+        <div class="ubicacion">
+          <div class="revelar">
+            <ul class="datos">
+              <li>
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                <div><strong>Dirección</strong><span data-hotel="direccion">[DIRECCIÓN DEL HOTEL]</span><br><span>Paipa, Boyacá · Colombia</span></div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.2 2"/></svg>
+                <div><strong>Horario de atención</strong><span data-hotel="horario">[HORARIO]</span></div>
+              </li>
+            </ul>
+            <a class="btn btn--primario" style="margin-top:1.8rem" data-enlace="mapa" href="#" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+          <!-- El mapa se inserta desde HOTEL.mapaEmbed en js/config.js -->
+          <div class="mapa revelar" id="mapa"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="seccion seccion--clara" id="contacto">
+      <div class="contenedor ubicacion">
+        <div class="revelar">
+          <h2>Hablemos</h2>
+          <p style="margin-top:1rem">Escríbenos para consultar disponibilidad, tarifas para grupos o cualquier duda sobre tu viaje a Paipa.</p>
+          <a class="btn btn--dorado" style="margin-top:1.6rem" href="reservas.html">Solicitar una reserva</a>
+        </div>
+        <ul class="datos revelar">
+          <li>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.2 2 2 0 0 1 6 3Z"/></svg>
+            <div><strong>Teléfono</strong><a data-enlace="telefono" href="#">[TELÉFONO DEL HOTEL]</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.5-4.3a8.5 8.5 0 1 1 15.5-4.6Z"/></svg>
+            <div><strong>WhatsApp</strong><a data-enlace="whatsapp" href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <div><strong>Correo</strong><a data-enlace="correo" href="#">[CORREO DEL HOTEL]</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div><strong>Dirección</strong><span data-hotel="direccion">[DIRECCIÓN DEL HOTEL]</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__logo"><img src="images/logo-claro.png" alt="Hotel Tuvalu"></p>
+          <p>Descanso, comodidad y atención cercana en Paipa, Boyacá. Un lugar tranquilo para volver después de recorrer la región.</p>
+          <div class="footer__redes" id="redes"></div>
+        </div>
+        <div>
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#habitaciones-seccion">Habitaciones</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="index.html#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a data-enlace="telefono" href="#">[TELÉFONO]</a></li>
+            <li><a data-enlace="correo" href="#">[CORREO]</a></li>
+            <li><span data-hotel="direccion">[DIRECCIÓN]</span></li>
+            <li><span data-hotel="horario">[HORARIO]</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__base">
+        <span>© <span data-anio></span> Hotel Tuvalu · Paipa, Boyacá</span>
+        <span><a href="panel.html">Acceso hotel</a> · Todos los derechos reservados</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa" data-enlace="whatsapp" href="#" target="_blank" rel="noopener" aria-label="Escribir al hotel por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.5-.2-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1a7.6 7.6 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-1 1-1.2 2.3-.5 3.7a12 12 0 0 0 4.7 4.8c2 .9 2.8.9 3.8.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2"/></svg>
+  </a>
+
+  <!-- Modal de detalles de habitación -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <div class="modal__caja" id="modalCuerpo"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
