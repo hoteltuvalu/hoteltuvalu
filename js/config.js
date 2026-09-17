@@ -13,25 +13,25 @@ const HOTEL = {
   pais: 'Colombia',
 
   // Reemplaza los corchetes por los datos reales del hotel
-  direccion: '[DIRECCIÓN DEL HOTEL]',
-  telefono: '[TELÉFONO DEL HOTEL]',          // Se muestra tal cual en pantalla
-  telefonoLink: '[TELEFONO_SIN_ESPACIOS]',   // Ej: '+573001234567' (para el enlace tel:)
-  whatsapp: '[WHATSAPP_SIN_ESPACIOS]',       // Ej: '573001234567' (sin + ni espacios)
-  correo: '[CORREO DEL HOTEL]',              // Ej: 'reservas@hoteltuvalu.com'
+  direccion: 'Calle 21 # 22 - 17',
+  telefono: '3143225152',          // Se muestra tal cual en pantalla
+  telefonoLink: '+573143225152',   // Ej: '+573001234567' (para el enlace tel:)
+  whatsapp: '+573143225152',       // Ej: '573001234567' (sin + ni espacios)
+  correo: 'hoteltuvalu@gmail.com',              // Ej: 'reservas@hoteltuvalu.com'
   horario: 'Recepción abierta las 24 horas', // [EDITABLE]
 
   // Mensaje con el que se abre WhatsApp desde el botón flotante
   whatsappMensaje: 'Hola, quiero información sobre el Hotel Tuvalu.',
 
   redes: {
-    instagram: '#', // Reemplaza por la URL real o deja '#'
-    facebook: '#',
+    instagram: 'https://www.instagram.com/hoteltuvalu/', // Reemplaza por la URL real o deja '#'
+    facebook: 'https://www.facebook.com/juancarlos.roberto.1',
     tiktok: ''      // Vacío = no se muestra
   },
 
   // Pega aquí el enlace "Insertar mapa" de Google Maps (atributo src del iframe).
   // Si lo dejas vacío se muestra un recuadro con instrucciones.
-  mapaEmbed: '',
+  mapaEmbed: 'https://maps.app.goo.gl/d9xutf5iWLJAMLtYA',
   // Enlace del botón "Cómo llegar"
   mapaComoLlegar: 'https://www.google.com/maps/dir/?api=1&destination=Paipa+Boyaca+Colombia',
 
@@ -82,10 +82,10 @@ const HABITACIONES = [
     descripcionLarga: 'Habitación cómoda y silenciosa, con lo necesario para descansar después de recorrer Paipa. [TEXTO EDITABLE]',
     capacidad: 1,
     capacidadTexto: '1 persona',
-    cama: '[TIPO DE CAMA]',
+    cama: 'Cama Sencilla',
     metros: '[M²]',
-    precioSinDesayuno: 0,                 // [PRECIO] por noche sin desayuno, ej: 150000
-    precioConDesayuno: 0,                 // [PRECIO] por noche con desayuno, ej: 175000
+    precioSinDesayuno: 90.000,                 // [PRECIO] por noche sin desayuno, ej: 150000
+    precioConDesayuno: 110.000,                 // [PRECIO] por noche con desayuno, ej: 175000
     unidades: 1,                          // cuántas habitaciones de este tipo tiene el hotel
     activa: true,                         // false = no se muestra ni se puede reservar
     caracteristicas: ['Wi-Fi', 'Baño privado', 'Agua caliente', 'TV']
@@ -98,10 +98,10 @@ const HABITACIONES = [
     descripcionLarga: 'Habitación amplia con espacio para dos huéspedes y zona para descansar. [TEXTO EDITABLE]',
     capacidad: 2,
     capacidadTexto: '2 personas',
-    cama: '[TIPO DE CAMA]',
+    cama: 'Cama Doble',
     metros: '[M²]',
-    precioSinDesayuno: 0,
-    precioConDesayuno: 0,
+    precioSinDesayuno: 180.000,
+    precioConDesayuno: 220.000,
     unidades: 1,
     activa: true,
     caracteristicas: ['Wi-Fi', 'Baño privado', 'Agua caliente', 'TV', 'Clóset']
@@ -114,7 +114,7 @@ const HABITACIONES = [
     descripcionLarga: 'Habitación con capacidad para tres huéspedes, cómoda para estadías de varios días. [TEXTO EDITABLE]',
     capacidad: 3,
     capacidadTexto: '3 personas',
-    cama: '[TIPO DE CAMA]',
+    cama: 'Cama Sencilla y Cama Doble',
     metros: '[M²]',
     precioSinDesayuno: 0,
     precioConDesayuno: 0,
@@ -130,10 +130,9 @@ const HABITACIONES = [
     descripcionLarga: 'Habitación amplia para familias, con espacio de sobra para el equipaje y los niños. [TEXTO EDITABLE]',
     capacidad: 4,
     capacidadTexto: 'Hasta 4 personas',
-    cama: '[TIPO DE CAMA]',
     metros: '[M²]',
-    precioSinDesayuno: 0,
-    precioConDesayuno: 0,
+    precioSinDesayuno: 320.000,
+    precioConDesayuno: 380.000,
     unidades: 1,
     activa: true,
     caracteristicas: ['Wi-Fi', 'Baño privado', 'Agua caliente', 'TV', 'Espacio familiar']
@@ -146,11 +145,11 @@ const HABITACIONES = [
 ------------------------------------------------------------- */
 const SERVICIOS = [
   { icono: 'wifi',       titulo: 'Wi-Fi',                texto: 'Conexión disponible en las habitaciones y zonas comunes.', confirmado: true },
-  { icono: 'recepcion',  titulo: 'Recepción',            texto: '[HORARIO DE RECEPCIÓN EDITABLE]', confirmado: true },
+  { icono: 'recepcion',  titulo: 'Recepción',            texto: '24H, confirmado: true },
   { icono: 'cama',       titulo: 'Habitaciones cómodas', texto: 'Espacios limpios y silenciosos para descansar de verdad.', confirmado: true },
   { icono: 'atencion',   titulo: 'Atención al huésped',  texto: 'Te ayudamos a organizar tus planes en Paipa.', confirmado: true },
   { icono: 'ubicacion',  titulo: 'Ubicación',            texto: 'A pocos minutos de los principales atractivos de Paipa.', confirmado: true },
-  { icono: 'parqueo',    titulo: 'Estacionamiento',      texto: '[CONFIRMAR DISPONIBILIDAD DE PARQUEADERO]', confirmado: false }
+  { icono: 'parqueo',    titulo: 'Estacionamiento',      texto: '', confirmado: false }
 ];
 
 /* ---------- 5. GALERÍA ----------
